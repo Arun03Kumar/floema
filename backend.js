@@ -12,7 +12,19 @@ app.set('views',__dirname + '/views')
 app.set('view engine', 'pug')
 
 app.get('/', (re, res) => {
-    res.render('index')
+    res.render('./pages/home')
+})
+
+app.get('/about', (re, res) => {
+    res.render('./pages/about')
+})
+
+app.get('/collections', (re, res) => {
+    res.render('./pages/collections')
+})
+
+app.get('/detail', (re, res) => {
+    res.render('./pages/detail')
 })
 
 app.listen(3000, () => {
